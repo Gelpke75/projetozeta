@@ -1,0 +1,45 @@
+@media(min-width:425px){
+
+    .allfooter {
+        max-width: 100vw;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img{
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    
+    img:hover{
+        background-color: rgba(0,0,0,0.3);
+        border: 1px solid blue;
+    }
+
+}
+
+@media(max-width:424px){
+
+    .allfooter {
+        max-width: 100vw;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img{
+        margin-right: 20px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    img:hover{
+        background-color: rgba(0,0,0,0.3);
+        border: 1px solid;
+    }
+
+}
+

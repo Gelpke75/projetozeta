@@ -1,0 +1,34 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-white p-md-3">
+    <div class="container">
+        <a class="navbar-brand logo" routerLink="..">
+            <img src="../../../assets/communityIcon_j68bk74k14o01.png" alt="Logo" width="35" height="27" class="d-inline-block align-text-top">
+            BraSchool
+          </a>
+      <button type="button" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="main" class="nav-link text-dark itens">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="contato" class="nav-link text-dark itens">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="login" class="nav-link text-dark itens logar">Login</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="alunos" class="nav-link text-dark itens" *ngIf="tuser">Alunos</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="lancarnotas" class="nav-link text-dark itens" *ngIf="tuser">Lançar Notas</a>
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+</nav>

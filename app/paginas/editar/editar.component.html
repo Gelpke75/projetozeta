@@ -1,0 +1,14 @@
+<form>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" [(ngModel)]="registro.nome" name="nome" required><br>
+    <label for="nome">Email:</label>
+    <input type="text" id="idade" [(ngModel)]="registro.email" name="email" required><br>
+    <label for="nome">Telefone:</label>
+    <input type="text" id="telefone" [(ngModel)]="registro.telefone" name="telefone" required><br>
+    <!-- Adicione outros campos do registro aqui -->
+  
+    <button type="submit" (click)="salvarEdicao()" >Salvar</button>
+  </form>
+
+<!-- (click)="salvarEdicao()" -->

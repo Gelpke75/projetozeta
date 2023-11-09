@@ -1,0 +1,46 @@
+
+<table mat-table [dataSource]="alunos" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let alunos"> {{alunos.nome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef> Telefone </th>
+        <td mat-cell *matCellDef="let alunos"> {{alunos.telefone}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="excluir">
+        <th mat-header-cell *matHeaderCellDef> Excluir </th>
+        <td mat-cell *matCellDef="let alunos"> 
+        <a routerLink="/excluir/{{alunos.id}}" (click)="removerAlunos(alunos)">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete">
+          </mat-icon>
+        </a> </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef> Editar </th>
+        <td mat-cell *matCellDef="let alunos"> 
+        <a routerLink="/lancarnotas/{{alunos.id}}" (click)="editarAlunos(alunos)">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="editar">
+          </mat-icon>
+        </a> </td>
+      </ng-container>
+   
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
